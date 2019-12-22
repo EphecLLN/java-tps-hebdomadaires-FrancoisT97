@@ -1,44 +1,42 @@
-package tp1;
+/**
+ * 
+ */
+package revision;
 
 /**
- * Cette classe modélise une calculatrice simplifiée avec une valeur courante et trois opérations. 
- * @author vvandens
+ * @author Fran�ois
  *
  */
 public class Calculatrice {
-	
-	double valeurCourante; // Stocke la valeur affichée sur l'écran de la calculatrice
-	
+
 	/**
-	 * Additionne un nombre à la valeur courante
-	 * @param n le nombre à ajouter à la valeur courante de la calculatrice
+	 * @param args
 	 */
-	void ajoute(double n) {
+	double valeurCourante = 0;
+	
+	void ajout(double n) {
 		valeurCourante+=n;
+		
 	}
-	/**
-	 * Soustrait un nombre à la valeur courante
-	 * @param n le nombre à soustraire à la valeur courante de la calculatrice
-	 */
-	void soustrait(double n) {
-		valeurCourante-=n;
-	}
-	/**
-	 * Elève la valeur courante au carré
-	 */
-	void carre() {
-		valeurCourante*=valeurCourante;
+	void soustrait (double n) {
+		valeurCourante -=n;
 	}
 	
-	/**
-	 * Méthode main permettant de lancer un test rapide de la classe calculatrice.
-	 * @param args les arguments de la ligne de commande
-	 */
+	void carre() {
+		valeurCourante *= valeurCourante;
+	}
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
 		Calculatrice myCalc = new Calculatrice();
-		myCalc.ajoute(5);
+		
+		myCalc.ajout(5);
+		System.out.println(myCalc.valeurCourante);
+		
 		myCalc.soustrait(2);
 		System.out.println(myCalc.valeurCourante);
+		
+
 	}
 
 }
